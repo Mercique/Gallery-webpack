@@ -17,8 +17,8 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
             {
-                test: /\.(png|jpg|gif)$/i,
-                use: ['file-loader']
+                test: /\.(jpg|gif)$/i,
+                use: ['img-optimize-loader']
             },
             {
                 test: /\.mp(3|4)$/i,
@@ -30,6 +30,6 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({template: path.resolve(__dirname, 'src', 'index.html')}),
         new MiniCssExtractPlugin(),
-        new BundleAnalyzerPlugin()
+        // new BundleAnalyzerPlugin()
     ]
 }
